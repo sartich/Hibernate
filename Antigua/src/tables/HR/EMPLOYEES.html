@@ -1,0 +1,853 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Hibernate Mappings - Table Info</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/doc-style.css" title="Style"/>
+	</head>
+	<body>
+
+	<div id="header">
+
+		<div id="logo">
+			<a href="http://www.hibernate.org/" target="_blank">
+				<img src="../../assets/hibernate_logo.gif" alt="Hibernate"/>
+			</a>
+		</div>
+
+		<ul><li><a href="../index.html" target="_top">Tables</a></li><li><a href="../../entities/index.html" target="_top">Entities</a></li></ul>
+
+		<hr/>
+
+	</div>
+
+		<h4>Schema HR</h4>
+		<h2>Table EMPLOYEES</h2>
+
+			<p>employees table. Contains 107 rows. References with departments,
+jobs, job_history tables. Contains a self reference.</p>
+
+		<table id="column_summary">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="7">
+						Column Summary
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 14%">
+						Name
+					</th>
+					<th style="width: 14%">
+						SqlType
+					</th>
+					<th style="width: 14%">
+						Length
+					</th>
+					<th style="width: 14%">
+						Precision
+					</th>
+					<th style="width: 14%">
+						Scale
+					</th>
+					<th style="width: 14%">
+						Nullable
+					</th>
+					<th style="width: 14%">
+						Unique
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+							<a href="#column_detail_EMPLOYEE_ID">
+								EMPLOYEE_ID
+							</a>
+						</td>
+						<td>
+							number(10,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							6
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_FIRST_NAME">
+								FIRST_NAME
+							</a>
+						</td>
+						<td>
+							varchar2(20 char)
+						</td>
+						<td>
+							20
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_LAST_NAME">
+								LAST_NAME
+							</a>
+						</td>
+						<td>
+							varchar2(25 char)
+						</td>
+						<td>
+							25
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_EMAIL">
+								EMAIL
+							</a>
+						</td>
+						<td>
+							varchar2(25 char)
+						</td>
+						<td>
+							25
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_PHONE_NUMBER">
+								PHONE_NUMBER
+							</a>
+						</td>
+						<td>
+							varchar2(20 char)
+						</td>
+						<td>
+							20
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_HIRE_DATE">
+								HIRE_DATE
+							</a>
+						</td>
+						<td>
+							date
+						</td>
+						<td>
+							7
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_JOB_ID">
+								JOB_ID
+							</a>
+						</td>
+						<td>
+							varchar2(10 char)
+						</td>
+						<td>
+							10
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_SALARY">
+								SALARY
+							</a>
+						</td>
+						<td>
+							number(8,2)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							8
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_COMMISSION_PCT">
+								COMMISSION_PCT
+							</a>
+						</td>
+						<td>
+							number(2,2)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_MANAGER_ID">
+								MANAGER_ID
+							</a>
+						</td>
+						<td>
+							number(10,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							6
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_DEPARTMENT_ID">
+								DEPARTMENT_ID
+							</a>
+						</td>
+						<td>
+							N/D
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							4
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+		<table id="primary_key">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="2">
+						Primary Key
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 50%">
+						Name
+					</th>
+					<th style="width: 50%">
+						Columns
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+								EMP_EMP_ID_PK
+						</td>
+						<td>
+								<a href="#column_detail_EMPLOYEE_ID">
+									EMPLOYEE_ID
+								</a>
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+			<table id="foreign_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="3">
+							Foreign Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 33%">
+							Name
+						</th>
+						<th style="width: 33%">
+							Referenced Table
+						</th>
+						<th style="width: 33%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								EMP_DEPT_FK
+							</td>
+							<td>
+								<a href="DEPARTMENTS.html" target="generalFrame">
+									DEPARTMENTS
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_DEPARTMENT_ID">
+										DEPARTMENT_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								EMP_JOB_FK
+							</td>
+							<td>
+								<a href="JOBS.html" target="generalFrame">
+									JOBS
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_JOB_ID">
+										JOB_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								EMP_MANAGER_FK
+							</td>
+							<td>
+								<a href="EMPLOYEES.html" target="generalFrame">
+									EMPLOYEES
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_MANAGER_ID">
+										MANAGER_ID
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+			
+			<table id="unique_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Unique Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								EMP_EMAIL_UK
+							</td>
+							<td>
+									<a href="#column_detail_EMAIL">
+										EMAIL
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<table id="indexes">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Indexes
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								EMP_DEPARTMENT_IX
+							</td>
+							<td>
+									<a href="#column_detail_DEPARTMENT_ID">
+										DEPARTMENT_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								EMP_JOB_IX
+							</td>
+							<td>
+									<a href="#column_detail_JOB_ID">
+										JOB_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								EMP_MANAGER_IX
+							</td>
+							<td>
+									<a href="#column_detail_MANAGER_ID">
+										MANAGER_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								EMP_NAME_IX
+							</td>
+							<td>
+									<a href="#column_detail_LAST_NAME">
+										LAST_NAME
+									</a>
+									<a href="#column_detail_FIRST_NAME">
+										FIRST_NAME
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<p id="column_detail" class="MainTableHeading">
+				Column Detail
+			</p>
+				
+				<h3 id="column_detail_EMPLOYEE_ID">EMPLOYEE_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(10,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 6
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> Primary key of employees table.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_FIRST_NAME">FIRST_NAME</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(20 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 20
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> First name of the employee. A not null column.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_LAST_NAME">LAST_NAME</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(25 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 25
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Last name of the employee. A not null column.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_EMAIL">EMAIL</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(25 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 25
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> Email id of the employee
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_PHONE_NUMBER">PHONE_NUMBER</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(20 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 20
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Phone number of the employee; includes country code and area code
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_HIRE_DATE">HIRE_DATE</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> date
+					</li>
+					<li>
+						<strong>Length:</strong> 7
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Date when the employee started on this job. A not null column.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_JOB_ID">JOB_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(10 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 10
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Current job of the employee; foreign key to job_id column of the
+jobs table. A not null column.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_SALARY">SALARY</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(8,2)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 8
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Monthly salary of the employee. Must be greater
+than zero (enforced by constraint emp_salary_min)
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_COMMISSION_PCT">COMMISSION_PCT</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(2,2)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 2
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Commission percentage of the employee; Only employees in sales
+department elgible for commission percentage
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_MANAGER_ID">MANAGER_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(10,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 6
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Manager id of the employee; has same domain as manager_id in
+departments table. Foreign key to employee_id column of employees table.
+(useful for reflexive joins and CONNECT BY query)
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_DEPARTMENT_ID">DEPARTMENT_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> N/D
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 4
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Department id where employee works; foreign key to department_id
+column of the departments table
+					</li>
+				</ul>
+
+
+				<hr/>
+				
+
+	</body>
+</html>

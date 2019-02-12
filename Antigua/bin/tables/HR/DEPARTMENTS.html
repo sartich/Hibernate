@@ -1,0 +1,401 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Hibernate Mappings - Table Info</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/doc-style.css" title="Style"/>
+	</head>
+	<body>
+
+	<div id="header">
+
+		<div id="logo">
+			<a href="http://www.hibernate.org/" target="_blank">
+				<img src="../../assets/hibernate_logo.gif" alt="Hibernate"/>
+			</a>
+		</div>
+
+		<ul><li><a href="../index.html" target="_top">Tables</a></li><li><a href="../../entities/index.html" target="_top">Entities</a></li></ul>
+
+		<hr/>
+
+	</div>
+
+		<h4>Schema HR</h4>
+		<h2>Table DEPARTMENTS</h2>
+
+			<p>Departments table that shows details of departments where employees
+work. Contains 27 rows; references with locations, employees, and job_history tables.</p>
+
+		<table id="column_summary">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="7">
+						Column Summary
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 14%">
+						Name
+					</th>
+					<th style="width: 14%">
+						SqlType
+					</th>
+					<th style="width: 14%">
+						Length
+					</th>
+					<th style="width: 14%">
+						Precision
+					</th>
+					<th style="width: 14%">
+						Scale
+					</th>
+					<th style="width: 14%">
+						Nullable
+					</th>
+					<th style="width: 14%">
+						Unique
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+							<a href="#column_detail_DEPARTMENT_ID">
+								DEPARTMENT_ID
+							</a>
+						</td>
+						<td>
+							number(5,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							4
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_DEPARTMENT_NAME">
+								DEPARTMENT_NAME
+							</a>
+						</td>
+						<td>
+							varchar2(30 char)
+						</td>
+						<td>
+							30
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_MANAGER_ID">
+								MANAGER_ID
+							</a>
+						</td>
+						<td>
+							number(10,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							6
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_LOCATION_ID">
+								LOCATION_ID
+							</a>
+						</td>
+						<td>
+							number(5,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							4
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+		<table id="primary_key">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="2">
+						Primary Key
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 50%">
+						Name
+					</th>
+					<th style="width: 50%">
+						Columns
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+								DEPT_ID_PK
+						</td>
+						<td>
+								<a href="#column_detail_DEPARTMENT_ID">
+									DEPARTMENT_ID
+								</a>
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+			<table id="foreign_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="3">
+							Foreign Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 33%">
+							Name
+						</th>
+						<th style="width: 33%">
+							Referenced Table
+						</th>
+						<th style="width: 33%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								DEPT_LOC_FK
+							</td>
+							<td>
+								<a href="LOCATIONS.html" target="generalFrame">
+									LOCATIONS
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_LOCATION_ID">
+										LOCATION_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								DEPT_MGR_FK
+							</td>
+							<td>
+								<a href="EMPLOYEES.html" target="generalFrame">
+									EMPLOYEES
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_MANAGER_ID">
+										MANAGER_ID
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+			
+		
+			<table id="indexes">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Indexes
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								DEPT_LOCATION_IX
+							</td>
+							<td>
+									<a href="#column_detail_LOCATION_ID">
+										LOCATION_ID
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<p id="column_detail" class="MainTableHeading">
+				Column Detail
+			</p>
+				
+				<h3 id="column_detail_DEPARTMENT_ID">DEPARTMENT_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(5,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 4
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> Primary key column of departments table.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_DEPARTMENT_NAME">DEPARTMENT_NAME</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(30 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 30
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> A not null column that shows name of a department. Administration,
+Marketing, Purchasing, Human Resources, Shipping, IT, Executive, Public
+Relations, Sales, Finance, and Accounting. 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_MANAGER_ID">MANAGER_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(10,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 6
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Manager_id of a department. Foreign key to employee_id column of employees table. The manager_id column of the employee table references this column.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_LOCATION_ID">LOCATION_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(5,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 4
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Location id where a department is located. Foreign key to location_id column of locations table.
+					</li>
+				</ul>
+
+
+				<hr/>
+				
+
+	</body>
+</html>

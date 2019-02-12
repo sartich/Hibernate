@@ -1,0 +1,517 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<title>Hibernate Mappings - Table Info</title>
+		<link rel="stylesheet" type="text/css" href="../../assets/doc-style.css" title="Style"/>
+	</head>
+	<body>
+
+	<div id="header">
+
+		<div id="logo">
+			<a href="http://www.hibernate.org/" target="_blank">
+				<img src="../../assets/hibernate_logo.gif" alt="Hibernate"/>
+			</a>
+		</div>
+
+		<ul><li><a href="../index.html" target="_top">Tables</a></li><li><a href="../../entities/index.html" target="_top">Entities</a></li></ul>
+
+		<hr/>
+
+	</div>
+
+		<h4>Schema HR</h4>
+		<h2>Table LOCATIONS</h2>
+
+			<p>Locations table that contains specific address of a specific office,
+warehouse, and/or production site of a company. Does not store addresses /
+locations of customers. Contains 23 rows; references with the
+departments and countries tables. </p>
+
+		<table id="column_summary">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="7">
+						Column Summary
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 14%">
+						Name
+					</th>
+					<th style="width: 14%">
+						SqlType
+					</th>
+					<th style="width: 14%">
+						Length
+					</th>
+					<th style="width: 14%">
+						Precision
+					</th>
+					<th style="width: 14%">
+						Scale
+					</th>
+					<th style="width: 14%">
+						Nullable
+					</th>
+					<th style="width: 14%">
+						Unique
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+							<a href="#column_detail_LOCATION_ID">
+								LOCATION_ID
+							</a>
+						</td>
+						<td>
+							number(5,0)
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							4
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_STREET_ADDRESS">
+								STREET_ADDRESS
+							</a>
+						</td>
+						<td>
+							varchar2(40 char)
+						</td>
+						<td>
+							40
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_POSTAL_CODE">
+								POSTAL_CODE
+							</a>
+						</td>
+						<td>
+							varchar2(12 char)
+						</td>
+						<td>
+							12
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_CITY">
+								CITY
+							</a>
+						</td>
+						<td>
+							varchar2(30 char)
+						</td>
+						<td>
+							30
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_STATE_PROVINCE">
+								STATE_PROVINCE
+							</a>
+						</td>
+						<td>
+							varchar2(25 char)
+						</td>
+						<td>
+							25
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_COUNTRY_ID">
+								COUNTRY_ID
+							</a>
+						</td>
+						<td>
+							N/D
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+		<table id="primary_key">
+			<thead>
+				<tr>
+					<th class="MainTableHeading" colspan="2">
+						Primary Key
+					</th>
+				</tr>
+				<tr>
+					<th style="width: 50%">
+						Name
+					</th>
+					<th style="width: 50%">
+						Columns
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+								LOC_ID_PK
+						</td>
+						<td>
+								<a href="#column_detail_LOCATION_ID">
+									LOCATION_ID
+								</a>
+						</td>
+					</tr>
+			</tbody>
+		</table>
+
+			<table id="foreign_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="3">
+							Foreign Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 33%">
+							Name
+						</th>
+						<th style="width: 33%">
+							Referenced Table
+						</th>
+						<th style="width: 33%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								LOC_C_ID_FK
+							</td>
+							<td>
+								<a href="COUNTRIES.html" target="generalFrame">
+									COUNTRIES
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_COUNTRY_ID">
+										COUNTRY_ID
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+			
+		
+			<table id="indexes">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Indexes
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								LOC_COUNTRY_IX
+							</td>
+							<td>
+									<a href="#column_detail_COUNTRY_ID">
+										COUNTRY_ID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								LOC_STATE_PROVINCE_IX
+							</td>
+							<td>
+									<a href="#column_detail_STATE_PROVINCE">
+										STATE_PROVINCE
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								LOC_CITY_IX
+							</td>
+							<td>
+									<a href="#column_detail_CITY">
+										CITY
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
+		
+			<p id="column_detail" class="MainTableHeading">
+				Column Detail
+			</p>
+				
+				<h3 id="column_detail_LOCATION_ID">LOCATION_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> number(5,0)
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 4
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> Primary key of locations table
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_STREET_ADDRESS">STREET_ADDRESS</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(40 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 40
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Street address of an office, warehouse, or production site of a company.
+Contains building number and street name
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_POSTAL_CODE">POSTAL_CODE</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(12 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 12
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Postal code of the location of an office, warehouse, or production site
+of a company. 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_CITY">CITY</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(30 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 30
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> A not null column that shows city where an office, warehouse, or
+production site of a company is located. 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_STATE_PROVINCE">STATE_PROVINCE</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar2(25 char)
+					</li>
+					<li>
+						<strong>Length:</strong> 25
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> State or Province where an office, warehouse, or production site of a
+company is located.
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_COUNTRY_ID">COUNTRY_ID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> N/D
+					</li>
+					<li>
+						<strong>Length:</strong> 2
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> Country where an office, warehouse, or production site of a company is
+located. Foreign key to country_id column of the countries table.
+					</li>
+				</ul>
+
+
+				<hr/>
+				
+
+	</body>
+</html>
